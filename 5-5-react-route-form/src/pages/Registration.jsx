@@ -6,7 +6,7 @@ export default function Registration() {
   const [errors, setErrors] = useState({});
 
   const [password, setPassword] = useState("");
-  
+
   const [gender, setGender] = useState("");
 
   const handleSubmit = (e) => {
@@ -40,7 +40,14 @@ export default function Registration() {
           )}
         </div>
         <div className="form-row">
-           {/*password*/}
+             <label htmlFor="password">Password</label>
+              <input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              {errors.password && <p className="error">{errors.password}</p>}
         </div>
 
         <fieldset className="form-row">
