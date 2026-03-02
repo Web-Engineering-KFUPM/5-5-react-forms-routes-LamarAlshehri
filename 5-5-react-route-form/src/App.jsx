@@ -162,7 +162,13 @@ export default function App() {
       </nav>
 
       <main className="container">
-        {/*Routes*/}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/registration" element={<Registration />} />
+          <Route path="*" element={<h2>404 — Not Found</h2>} />
+        </Routes>
+
       </main>
 
       <footer className="footer">
